@@ -26,6 +26,7 @@ lazy val doodle = crossProject.
     libraryDependencies ++= Seq(
        "org.typelevel"  %%% "cats-core" % catsVersion,
        "org.typelevel"  %%% "cats-free" % catsVersion,
+       "com.lihaoyi"    %%% "scalatags" % "0.6.7",
        "org.scalatest"  %%% "scalatest" % "3.0.2" % "test",
        "org.scalacheck" %%% "scalacheck" % "1.13.5" % "test"
     ),
@@ -58,8 +59,7 @@ lazy val doodle = crossProject.
     """.trim.stripMargin,
     //refreshBrowsers <<= refreshBrowsers.triggeredBy(packageJS in Compile)
     libraryDependencies ++= Seq(
-      "org.scala-js"  %%% "scalajs-dom" % "0.9.2",
-      "com.lihaoyi"   %%% "scalatags"   % "0.6.3"
+      "org.scala-js"  %%% "scalajs-dom" % "0.9.2"
     )
   )
 
